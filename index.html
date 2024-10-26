@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="icon" type="image/x-icon" href="assets/image/favicon.webp">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body class="bg-custom">
+    <main class="container">
+
+        <div class="dataCapture">
+            <h1>Lista de Tareas</h1>
+            <input type="text" id="new-task" placeholder="Añade tu tarea" >
+            <button id="add-task" class="btn-add">Agregar</button>
+        </div>
+
+        <section class="themes">
+            <p>Selecciona un tema:</p>
+            <select id="theme-selector">
+                <option >Por Defecto</option>
+                <option value="dark">Oscuro</option>
+                <option value="custom">Durazno</option>
+                <option value="custom2">Cielo</option>
+            </select>
+        </section>
+
+        <!-- Pestañas para seleccionar tareas pendientes o completadas -->
+        <div class="tabs">
+            <button class="tab-link active tab-pending" onclick="openTab(event, 'pendientes')">
+                Tareas Pendientes (<span id="pending-count">0</span>)
+            </button>
+            <button class="tab-link tab-completed" onclick="openTab(event, 'completadas')">
+                Tareas Completadas (<span id="completed-count">0</span>)
+            </button>
+        </div>
+
+        <!-- Contenedor de tareas pendientes -->
+        <div id="pendientes" class="tab-content active">
+            <ul id="task-list-pendientes">
+                <!-- Aquí se añadirán las tareas pendientes dinámicamente -->
+            </ul>
+        </div>
+
+        <!-- Contenedor de tareas completadas -->
+        <div id="completadas" class="tab-content">
+            <ul id="task-list-completadas">
+                <!-- Aquí se añadirán las tareas completadas dinámicamente -->
+            </ul>
+        </div>
+
+    </main>
+
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/themeSelector.js"></script>
+</body>
+
+</html>
