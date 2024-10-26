@@ -39,8 +39,6 @@ Este proyecto es una **aplicación de lista de tareas** creada con **JavaScript*
 
    git clone https://github.com/JRMRIVAS/ToDo-App.git
 
-##  Instalación y Uso
-
 ## 💻 Desarrollador
 
    - **José Rodrigo Morales Rivas**
